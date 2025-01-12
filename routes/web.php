@@ -1,14 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\SejarahController;
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/profil', function () {
-    return view('profil');
-});
+Route::get('/profil', [ProfilController::class, 'showShortenedSejarah']);
+
+Route::get('/detailSejarah', [SejarahController::class, 'showDetailSejarah']);
 
 Route::get('/berita', function () {
     return view('berita');

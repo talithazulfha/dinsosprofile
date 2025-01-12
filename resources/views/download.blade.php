@@ -2,9 +2,13 @@
 @section('title', 'Download')
 @section('content')
 
-<x-search-bar></x-search-bar>
+
+<div class="mt-16">
+    <x-search-bar></x-search-bar>
+</div>
 
 <div class="max-w-7xl mx-auto px-4 pb-12">
+    
     <div class="bg-white rounded-lg shadow-md overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full">

@@ -2,4 +2,6 @@
 @section('title', 'Kegiatan')
 @section('content')
 
+
+
 @endsection
