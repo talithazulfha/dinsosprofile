@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title', 'Beranda')
 @section('content')
-<section class="relative h-[600px] mt-16"> <!-- Added mt-16 for navbar spacing -->
+<section class="relative h-[600px]"> <!-- Added mt-16 for navbar spacing -->
     <!-- Carousel Slides -->
     <div class="relative h-full">
         <div class="carousel-slide absolute inset-0 transition-opacity duration-500">
@@ -70,7 +70,6 @@
 <section class="py-16">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-semibold mb-8">BERITA</h2>
-        <div class="relative">
             <div class="news-scroll overflow-x-auto pb-6">
                 <div class="flex space-x-6 w-max">
                     <!-- Berita Cards -->
@@ -90,7 +89,6 @@
                     @endfor
                 </div>
             </div>
-        </div>
     </div>
 </section>
     

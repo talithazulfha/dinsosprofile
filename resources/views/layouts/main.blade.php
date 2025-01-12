@@ -8,6 +8,8 @@
     <!-- Tambahkan Tailwind CSS -->
     @vite(['resources/css/app.css','resources/js/app.js'])
     <!-- Tambahkan Custom CSS jika ada -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         .navbar-scroll {
             transform: translateY(-1rem);
@@ -24,7 +26,7 @@
     @include('partials.navbar')
 
     <!-- Main Content -->
-    <div class="pt-24"> <!-- Tambahkan padding agar konten tidak tertutup navbar -->
+    <div> <!-- Tambahkan padding agar konten tidak tertutup navbar -->
         @yield('content')
     </div>
 
