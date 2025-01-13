@@ -3,9 +3,9 @@
 @section('content')
 <section class="relative h-[600px]"> <!-- Added mt-16 for navbar spacing -->
     <!-- Carousel Slides -->
-    <div class="relative h-full">
+    <div class="relative h-full" style="user-select: none;" oncontextmenu="return false;">
         <div class="carousel-slide absolute inset-0 transition-opacity duration-500">
-            <img src="{{ asset('images/hero-1.jpg') }}" alt="Hero 1" class="w-full h-full object-cover">
+            <img src="{{ asset('images/fariz.jpg') }}" alt="Hero 1" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-white text-center">
@@ -115,7 +115,7 @@
                 <div class="bg-white rounded-lg shadow p-4">
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3172098140285"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3172098140285!2d100.3581196!3d-0.9247136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b8d75e136e61%3A0xedc7d0fa6b6017af!2sSocial+Agency+of+West+Sumatra+Province!5e0!3m2!1sen!2sid!4v1684921565049!5m2!1sen!2sid"
                             width="100%" 
                             height="450" 
                             style="border:0;" 
@@ -127,4 +127,14 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            // Disable keyboard copy shortcut
+            document.addEventListener('keydown', function (e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                    e.preventDefault();
+                    alert('Copying content is disabled!');
+                }
+            });
+        </script>
 @endsection

@@ -1,5 +1,6 @@
-<nav id="navbar" class="fixed w-full bg-white bg-opacity-50 backdrop-blur-sm shadow-lg my-6 z-50 transition-all duration-500 ease-in-out"  >
-    <div class="flex justify-between items-center px-6">
+<nav id="navbar" class="fixed w-full bg-white bg-opacity-50 backdrop-blur-sm shadow-lg my-6 z-50 transition-all duration-500 ease-in-out py-2"  >
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center px-4 md:px-6">
+       <a href="/">
         <div class="flex items-center">
             <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-12 mr-4">
             <div>
@@ -7,16 +8,60 @@
             <span class="block text-[16px] text-[#FF8000]" style="font-family: 'Inter';">PROVINSI SUMATERA BARAT</span>
             </div>
         </div>
-        <div class="hidden md:flex space-x-6">
-            <a href="/" class="text-gray-700 hover:text-gray-900">Beranda</a>
-            <a href="/profil" class="text-gray-700 hover:text-gray-900">Profil</a>
-            <a href="/berita" class="text-gray-700 hover:text-gray-900">Berita</a>
-            <a href="/galeri" class="text-gray-700 hover:text-gray-900">Galeri</a>
-            <a href="https://www.lapor.go.id/" target="blank" class="text-gray-700 hover:text-gray-900">Lapor</a>
-            <a href="/kegiatan" class="text-gray-700 hover:text-gray-900">Kegiatan</a>
-            <a href="/download" class="text-gray-700 hover:text-gray-900">Download</a>
-            <a href="/ppid" class="text-gray-700 hover:text-gray-900">PPID</a>
+    </a>
+        <div class="hidden md:flex space-x-6 gap-5 font-bold">
+            <a href="/" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                Beranda
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="/profil" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                Profil
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="/berita" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                Berita
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <div class="relative group">
+                <a href="/galeri" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                    Galeri
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                </a>
+                <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2">
+                    <a href="/galeri/foto" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Foto</a>
+                    <a href="/galeri/video" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Video</a>
+                </div>
+            </div>
+            <a href="https://www.lapor.go.id/" target="_blank" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                Lapor
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="/kegiatan" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                Kegiatan
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="/download" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                Download
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <div class="relative group">
+                <a href="/ppid" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                    PPID
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                </a>
+                <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2">
+                    <a href="/ppid/profil" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Profil PPID</a>
+                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Serta Merta</a>
+                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Tersedia Setiap Saat</a>
+                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Berkala</a>
+                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Dikecualikan</a>
+                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Permohonan Informasi</a>
+                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Keberatan Permohonan</a>
+                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Maklumat</a>
+                </div>
+            </div>
         </div>
+        
     </div>
 </nav>
 

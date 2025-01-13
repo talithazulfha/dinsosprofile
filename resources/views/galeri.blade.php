@@ -2,9 +2,13 @@
 @section('title', 'Galeri')
 @section('content')
 
-<x-search-bar></x-search-bar>
+
 
 <div class="container mx-auto px-4 py-8">
+
+    <div class="mt-16">
+        <x-search-bar></x-search-bar>
+    </div>
     <!-- Featured Document -->
     <div class="mb-12">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
