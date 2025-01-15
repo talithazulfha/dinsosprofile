@@ -18,7 +18,6 @@
         </div>
     </div>
 
-
     <!-- Featured Activity -->
     <div class="mb-12">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">

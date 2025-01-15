@@ -3,12 +3,12 @@
 @section('content')
 
 <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 mt-16">
         <h1 class="text-3xl font-bold text-navy-900 mb-8 text-center">Tentang DINSOS</h1>
         
         <div class="flex flex-col md:flex-row gap-8 items-center">
             <div class="md:w-1/2">
-                <img src="{{ asset('images/dinsos-building.jpg') }}" alt="Kantor Dinas Sosial" 
+                <img src="{{ asset('images/home.png') }}" alt="Kantor Dinas Sosial" 
                      class="rounded-lg shadow-lg w-full h-auto">
             </div>
             <div class="md:w-1/2 space-y-4">

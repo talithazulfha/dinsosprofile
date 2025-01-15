@@ -23,13 +23,13 @@
                 <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
             </a>
             <div class="relative group">
-                <a href="/galeri" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                <a href="#" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
                     Galeri
                     <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
                 </a>
                 <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2">
-                    <a href="/galeri/foto" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Foto</a>
-                    <a href="/galeri/video" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Video</a>
+                    <a href="/foto" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Foto</a>
+                    <a href="/video" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Video</a>
                 </div>
             </div>
             <a href="https://www.lapor.go.id/" target="_blank" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
@@ -45,19 +45,19 @@
                 <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
             </a>
             <div class="relative group">
-                <a href="/ppid" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
+                <a href="#" class="relative text-gray-700 hover:text-[#0E0C43] transition-colors duration-150 ease-in-out group">
                     PPID
                     <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0E0C43] transition-all duration-300 ease-in-out group-hover:w-full"></span>
                 </a>
                 <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2">
-                    <a href="/ppid/profil" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Profil PPID</a>
-                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Serta Merta</a>
-                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Tersedia Setiap Saat</a>
-                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Berkala</a>
-                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Dikecualikan</a>
-                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Permohonan Informasi</a>
-                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Keberatan Permohonan</a>
-                    <a href="/ppid/informasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Maklumat</a>
+                    <a href="{{ route('ppid.profil') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Profil PPID</a>
+                    <a href="{{ route('ppid.serta-merta') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Serta Merta</a>
+                    <a href="{{ route('ppid.setiap-saat') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Tersedia Setiap Saat</a>
+                    <a href="{{ route('ppid.berkala') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Berkala</a>
+                    <a href="{{ route('ppid.dikecualikan') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Informasi Dikecualikan</a>
+                    <a href="/permohonanInformasi" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Permohonan Informasi</a>
+                    <a href="/permohonanKeberatan" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Keberatan Permohonan</a>
+                    <a href="/maklumatPpid" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 whitespace-nowrap">Maklumat</a>
                 </div>
             </div>
         </div>

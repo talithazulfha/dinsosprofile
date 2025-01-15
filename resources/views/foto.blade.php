@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Galeri')
+@section('title', 'Foto')
 @section('content')
 
 
@@ -26,7 +26,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies.
                 </p>
-                <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-700">
+                <a href="/detailFoto" class="inline-flex items-center text-blue-600 hover:text-blue-700">
                     Lihat Detail
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
