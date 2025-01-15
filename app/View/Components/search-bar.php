@@ -6,14 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class search-bar extends Component
+class SearchBar extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        // Constructor kosong jika tidak ada data yang diterima
     }
 
     /**
