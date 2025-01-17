@@ -6,13 +6,13 @@
 <div class="w-full px-6 py-8">
     <!-- Back Button (diletakkan di bawah navbar dengan padding) -->
     <div class="mb-8 pt-20"> <!-- Add padding-top to give space for the navbar -->
-        <a href="#" onclick="history.back()" 
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-400 hover:bg-gray-200 transition duration-300 transform hover:scale-110 ml-80"
-        style="background-color: #0E0C43; box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);">
-         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-         </svg>
-     </a>
+<a href="#" onclick="history.back()" 
+   class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-400 hover:bg-gray-200 transition duration-300 transform hover:scale-110 ml-2 pt-4"
+   style="background-color: #0E0C43; box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+    </svg>
+</a>
     </div>
 </div>
 
