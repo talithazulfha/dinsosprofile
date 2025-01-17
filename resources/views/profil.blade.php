@@ -2,6 +2,16 @@
 @section('title', 'Profil')
 @section('content')
 
+
+<section class="bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center mb-8">
+            <a href="/" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </a>
+
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4 mt-16">
         <h1 class="text-3xl font-bold text-navy-900 mb-8 text-center">Tentang DINSOS</h1>
@@ -22,164 +32,88 @@
                     habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                 </p>
             </div>
+
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl font-bold text-navy-900 mb-4">Jambore Nasional Pramuka Anak</h1>
+            <div class="text-gray-600 mb-8">
+                <span>03 januari 2024</span>
+                <span class="mx-2">·</span>
+                <span>Oleh: Dinsos</span>
+                <span class="mx-2">·</span>
+                <span>90 kali dibaca</span>
+            </div>
+
+            <div class="mb-8">
+                <img src="{{ asset('images/jambore-banner.jpg') }}" alt="Jambore Nasional Pramuka Anak" 
+                     class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+
+            <div class="space-y-6 bg-white rounded-lg shadow-sm p-6">
+                <div>
+                    <div class="mb-4">
+                        <span class="font-medium">Tanggal mulai Kegiatan : </span>
+                        <span>Sabtu, 22 Juli 2023</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="font-medium">Tanggal selesai Kegiatan : </span>
+                        <span>Sabtu, 22 Juli 2023</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="font-medium">Lokasi Kegiatan : </span>
+                        <span>Bukittinggi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 text-gray-600">
+                <p>Dinas Sosial Provinsi Sumatera Barat, Akan melaksanakan Event Nasional yaitu Jambore Nasional Pramuka Anak Di Bukittinggi yang akan dilaksanakan pada tanggal 22 - 25 Juli 2023</p>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="py-16 bg-gray-50">
+<section class="bg-navy-900 text-white py-16">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-navy-900 mb-8 text-center">Profil DINSOS</h2>
-        
-        <div class="grid gap-6 max-w-5xl mx-auto">
-            <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
-                        onclick="toggleSection('visi-misi')">
-                    <span class="font-medium text-gray-800">Visi dan Misi Pemerintahan Daerah Provinsi Sumatera Barat</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div id="visi-misi" class="hidden px-6 py-4 border-t">
-                    <div class="p-4 ">
-                        <div class="space-y-6">
-                            <div class="text-center">
-                                <h4 class="font-bold text-2xl mb-2">Visi</h4>
-                                <p class="text-gray-600">"Terwujudnya Sumatera Barat Madani yang Unggul dan Berkelanjutan"</p>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-2xl mb-2 text-center">Misi</h4>
-                                <p class="text-gray-600">Misi untuk Dinas Sosial adalah Misi-1 dan Misi-2 dari 7 Misi</p>
-                                <ol class="list-decimal pl-5 space-y-2 text-gray-600">
-                                    <li>Meningkatkan kualitas sumber daya manusia yang sehat, berpengetahuan, terampil dan berdaya saing.</li>
-                                    <li>Meningkatkan tata kehidupan sosial kemasyarakatan berdasarkan Falsafah Adaiak Basandi Syara', Syara' Basandi Kitabullah.</li>
-                                    <li>Meningkatkan nilai tambah dan produktifitas pertanian, perkebunan, perternakan dan perikanan.</li>
-                                    <li>Meningkatkan usaha perdagangan dan industri kecil/menengah serta ekonomi berbasis digital.</li>
-                                    <li>Meningkatkan ekonomi kreatif dan daya saing kepariwisataan.</li>
-                                    <li>Meningkatkan pembangunan infrastruktur yang berkeadilan dan berkelanjutan.</li>
-                                    <li>Mewujudkan tata kelola pemerintah dan pelayanan publik yang bersih, akuntabel serta berkualitas.</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Hubungi Kami</h3>
+                <div class="space-y-2">
+                    <p>Alamat : Jl. Khatib Sulaiman No. 5 Padang</p>
+                    <p>Telp : (0751) 7051465</p>
+                    <p>Fax : (0751) 7057284</p>
+                    <p>Email : dinsos@sumbarprov.go.id</p>
                 </div>
             </div>
             
-            {{-- Repeat similar structure for other sections --}}
-            <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
-                        onclick="toggleSection('tugas-fungsi')">
-                    <span class="font-medium text-gray-800">Tugas dan Fungsi</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div id="tugas-fungsi" class="hidden px-6 py-4 border-t">
-                    <div class="p-4 ">
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="font-bold text-2xl mb-2 text-center">Peraturan Gubernur Sumatera Barat Nomor 48 Tahun 2017 Tentang Uraian Tugas Pokok dan Fungsi Dinas Sosial Provinsi Sumater Barat</h4>
-                                <ol class="list-none pl-5 space-y-2 text-gray-600">
-                                    <li>(1) Dinas mempunyai tugas pokok melaksanakan penyusunan dan pelaksanaan kebijakan daerah dibidang sosial serta pembantuan.</li>
-                                    <li>(2) Untuk menyelenggarakan tugas pokok sebagaimana dimaksud pada ayat (1), Dinas mempunyai fungsi :</li>
-                                    <ol class="list-[lower-alpha] pl-10 space-y-2 text-gray-600">
-                                        <li>perumusan kebijakan teknis di bidang Sosial;</li>
-                                        <li>penyelenggaraan urusan pemerintahan dan pelayanan umum di bidang Sosial;</li>
-                                        <li>pembinaan dan fasilitasi bidang Sosial, lingkup provinsi dan kabupaten/kota;</li>
-                                        <li>pelaksanaan kesekretariatan dinas;</li>
-                                        <li>pelaksanaan tugas di bidang perlindungan dan jaminan sosial, rehabilitasi sosial pemberdayaan sosial, dan penanganan fakir miskin;</li>
-                                        <li>pemantauan, evaluasi dan pelaporan di bidang sosial; dan</li>
-                                        <li>pelaksanaan tugas kedinasan lain yang diberikan oleh pimpinan.</li>
-                                    </ol>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Tentang Kami</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-gray-300">Tentang Kami</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Kontak</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Kebijakan</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Syarat & ketentuan</a></li>
+                </ul>
             </div>
-
-            <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
-                        onclick="toggleSection('struktur')">
-                    <span class="font-medium text-gray-800">Struktur Organisasi</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div id="struktur" class="hidden px-6 py-4 border-t">
-                    <div class="p-4 ">
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="font-bold text-2xl mb-2 text-center">Struktur Organisasi Dinas Sosial Provinsi Sumatera Barat</h4>
-                                <img src="{{ asset('images/struktur.png') }}" alt="Struktur" class="w-full h-auto mx-auto mt-4">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center" onclick="toggleSection('sejarah')">
-                    <span class="font-medium text-gray-800">Sejarah Singkat</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                
-                <div id="sejarah" class="hidden px-6 py-4 border-t">
-                    <p class="text-gray-600 leading-relaxed">
-                        {{ $shortenedSejarah }}
-                    </p>
-                    <a href="/detailSejarah" class="text-blue-600 hover:underline">Baca Selengkapnya</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
-                        onclick="toggleSection('pegawai')">
-                    <span class="font-medium text-gray-800">Daftar Pegawai Dinas Sosial Sumatera Barat</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div id="pegawai" class="hidden px-6 py-4 border-t">
-                    {{-- Content here --}}
-                </div>
+            
+            <div>
+                <h3 class="text-xl font-bold mb-4">Link Terkait</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-gray-300">Sumbarprov</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Simaya Sumbar</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Portal E-Government</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Kominfo</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-navy-900 mb-12 text-center">Jam Pelayanan</h2>
-        
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="text-center p-6 bg-gray-50 rounded-lg">
-                <div class="text-orange-500 font-medium mb-4">HARI SENIN - KAMIS</div>
-                <div class="text-2xl font-bold text-navy-900">08.00 - 15.30 WIB</div>
-            </div>
-            <div class="text-center p-6 bg-gray-50 rounded-lg">
-                <div class="text-orange-500 font-medium mb-4">HARI SENIN - KAMIS</div>
-                <div class="text-2xl font-bold text-navy-900">08.00 - 15.30 WIB</div>
-            </div>
-        </div>
+<footer class="bg-navy-900 text-white py-4 border-t border-gray-700">
+    <div class="container mx-auto px-4 text-center">
+        <p>©2025 Dinas Sosial Provinsi Sumatera Barat | by Diskominfo Sumbar</p>
     </div>
-</section>
-
-<script>
-    function toggleSection(id) {
-    const section = document.getElementById(id);
-    const button = section.previousElementSibling;
-    const icon = button.querySelector('svg');
-    
-    if (section.classList.contains('hidden')) {
-        section.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-    } else {
-        section.classList.add('hidden');
-        icon.classList.remove('rotate-180');
-    }
-}
-</script>
+</footer>
 
 @endsection
