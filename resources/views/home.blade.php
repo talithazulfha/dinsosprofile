@@ -1,12 +1,13 @@
 @extends('layouts.main')
 @section('title', 'Beranda')
 @section('content')
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <section class="relative h-[60vh] sm:h-[60vh] md:h-[70vh] lg:h-[600px] overflow-hidden"> 
     <!-- Carousel Slides -->
     <div class="relative h-full" style="user-select: none;" oncontextmenu="return false;">
         {{-- First Slide --}}
         <div class="carousel-slide absolute inset-0 transition-opacity duration-700">
-            <img src="{{ asset('images/logo.png') }}" alt="Hero 1" class="w-full h-full object-cover">
+            <img src="{{ asset('images/sample2.jpg') }}" alt="Hero 1" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black opacity-60"></div>
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-white text-center max-w-4xl px-4 animate-fade-up">
@@ -18,7 +19,7 @@
 
         {{-- Second Slide --}}
         <div class="carousel-slide absolute inset-0 transition-opacity duration-700 hidden">
-            <img src="{{ asset('images/home.png') }}" alt="Hero 2" class="w-full h-full object-cover">
+            <img src="{{ asset('images/sample3.jpg') }}" alt="Hero 2" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black opacity-60"></div>
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-white text-center max-w-4xl px-4 animate-fade-up">
@@ -130,6 +131,7 @@
     <div class="container mx-auto px-4 max-w-6xl">
         <h2 class="text-2xl md:text-3xl font-bold text-[#0E0C43] mb-8 after:content-[''] after:block after:w-20 after:h-1 after:bg-blue-600 after:mt-4">
             Layanan Kami
+            
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             @for ($i = 1; $i <= 3; $i++)
@@ -158,7 +160,9 @@
         <!-- Lokasi Section -->
         <section class="py-8 sm:py-12 md:py-16 ">
             <div class="container mx-auto px-4 max-w-6xl">
-                <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-8">Lokasi</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#0E0C43] mb-8 after:content-[''] after:block after:w-20 after:h-1 after:bg-blue-600 after:mt-4">
+                    Lokasi
+                </h2>
                 <div class="bg-white rounded-lg shadow p-2 sm:p-4">
                     <div class="w-full" style="aspect-ratio: 16 / 5;">
                         <iframe 

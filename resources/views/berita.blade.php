@@ -2,18 +2,10 @@
 @section('title', 'Berita')
 @section('content')
 
+<x-header>Berita</x-header>
 
-<div class="container max-w-6xl mx-auto px-4 py-8">
 
-    <div class="text-center mt-16">
-        <h1 class="text-4xl font-bold text-[#0E0C43] mb-4 animate-fade-in">
-            <span class="inline-block">📰</span> Berita Terkini
-        </h1>
-        <p class="text-gray-600 animate-slide-up">Temukan informasi terbaru seputar kegiatan Dinas Sosial Provinsi Sumatera Barat</p>
-    </div>
-
-        <x-search-bar></x-search-bar>
-
+<div class="container max-w-6xl mx-auto px-4 py-8">       
 
 <div class="space-y-8 mt-8">
     @for ($i = 1; $i <= 9; $i++)

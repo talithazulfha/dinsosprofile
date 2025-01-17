@@ -2,6 +2,26 @@
 @section('title', 'Profil')
 @section('content')
 
+<div class="heading bg-cover bg-center py-20 md:py-32 flex items-center justify-center relative">
+    <!-- Background with overlay -->
+    <div class="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-1000" 
+         style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample.jpg')">
+    </div>
+
+    <!-- Content Container -->
+    <div class="flex flex-col items-center justify-center relative z-10 w-full mt-8 px-4 sm:px-8 md:px-16">
+        <!-- Title -->
+        <h1 class="text-3xl sm:text-4xl md:text-6xl text-white uppercase font-bold tracking-wider fade-in-scale mb-6 sm:mb-8 text-center">
+            <span class="flex items-center">
+                <span class="w-16 sm:w-10 md:w-20 h-1 bg-white mr-4"></span>
+                Profil
+                <span class="w-16 sm:w-10 md:w-20 h-1 bg-white ml-4"></span>
+            </span>
+        </h1>
+
+    </div>
+</div>
+
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4 mt-16">
         <h1 class="text-3xl font-bold text-navy-900 mb-8 text-center">Tentang DINSOS</h1>

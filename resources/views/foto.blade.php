@@ -2,77 +2,29 @@
 @section('title', 'Foto')
 @section('content')
 
-
+<x-header>Foto</x-header>
 
 <div class="container max-w-6xl mx-auto px-4 py-8">
 
-    <div class="text-center mb-8 mt-16 animate-fade-in">
-        <h1 class="text-4xl font-bold text-[#0E0C43] mb-4">
-            <span class="inline-block animate-bounce">📸</span> Galeri Foto
-        </h1>
-        <p class="text-gray-600">Dokumentasi kegiatan dan momen penting Dinas Sosial Provinsi Sumatera Barat</p>
-    </div>
 
-        <x-search-bar></x-search-bar>
-
-    <!-- Featured Document -->
-<div class="mb-12 mt-12">
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:-translate-y-1 transition-all duration-500 group">
-            <div class="p-8">
-                <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-2xl font-bold text-gray-900 flex items-center">
-                        <span class="inline-block mr-2">📊</span>
-                        Alur Pengaduan Pelayanan Publik
-                    </h2>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
-                        <span class="inline-block mr-1">🌟</span> Featured
-                    </span>
-                </div>
-                
-                <div class="flex items-center text-sm text-gray-500 mb-4">
-                    <span class="inline-block mr-2">📅</span>
-                    03 Januari 2024
-                    <span class="mx-2">•</span>
-                    <span class="inline-block mr-2">👁️</span>
-                    1,234 views
-                </div>
-
-                <div class="relative aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-lg group">
-                    <img src="{{ asset('images/flow-diagram.jpg') }}" 
-                         alt="Flow Diagram" 
-                         class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies.
-                </p>
-
-                <a href="/detailFoto" class="inline-flex items-center px-6 py-3 bg-[#0E0C43] text-white rounded-full hover:bg-[#1a1860] transition-colors duration-300 group">
-                    <span class="mr-2">Lihat Detail</span>
-                    <span class="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- Document Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
         @for ($i = 1; $i <= 9; $i++)
         <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
             <div class="p-4">
                 <div class="relative overflow-hidden rounded-lg mb-4">
-                    <img src="{{ asset('images/flow-diagram-small.jpg') }}" 
+                    <img src="{{ asset('images/sample.jpg') }}" 
                          alt="Flow Diagram" 
                          class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
-                        <button class="bg-white/90 p-2 rounded-full transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <button onclick="openImageModal('{{ asset('images/sample.jpg') }}', 'Foto')" 
+                        class="bg-white/90 p-2 rounded-full transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <span class="text-xl">🔍</span>
                         </button>
                     </div>
                 </div>
-
+    
                 <div class="flex items-center text-sm text-gray-500 mb-2">
                     <span class="inline-block mr-2">📅</span>
                     03 Januari 2024
@@ -80,14 +32,39 @@
                     <span class="inline-block mr-2">👁️</span>
                     856 views
                 </div>
-
-                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#0E0C43] transition-colors duration-300">
+    
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#0E0C43] transition-colors duration-300 mb-4">
                     Alur Pengaduan Pelayanan Publik Dinas Sosial Provinsi Sumatera Barat
                 </h3>
+    
+                <a href="" 
+                   class="inline-block w-full bg-[#23216a] text-white px-6 py-3 rounded-lg text-center 
+                          transition-all duration-300 hover:bg-[#0E0C43] hover:shadow-xl hover:-translate-y-1 
+                          relative overflow-hidden group">
+                    <span class="relative z-10">Baca Selengkapnya</span>
+                    <div class="absolute inset-0 w-0 bg-[#0E0C43] transition-all duration-300 ease-out group-hover:w-full"></div>
+                </a>
             </div>
         </div>
         @endfor
     </div>
+
+    <div id="imageModal" 
+     class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+     onclick="closeImageModal()">
+    <div class="relative max-w-4xl w-full" onclick="event.stopPropagation()">
+        <div class="relative">
+            <img id="modalImage" src="" alt="" class="w-full rounded-t-2xl max-h-[80vh] object-contain">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
+                <p id="modalCaption" class="text-white text-xl font-medium text-center"></p>
+            </div>
+        </div>
+        <button onclick="closeImageModal()" 
+                class="absolute -top-4 -right-4 bg-white/90 p-2 rounded-full hover:bg-white transition-colors">
+            <span class="text-xl">✕</span>
+        </button>
+    </div>
+</div>
 
 <x-pagination></x-pagination>
 
@@ -132,5 +109,33 @@
         scroll-behavior: smooth;
     }
     </style>
+
+<script>
+    function openImageModal(imageSrc, caption) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        
+        modalImage.src = imageSrc;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+        
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+    
+    function closeImageModal() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Close modal when pressing Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeImageModal();
+        }
+    });
+    </script>
 
 @endsection

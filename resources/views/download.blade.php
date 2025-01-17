@@ -2,6 +2,8 @@
 @section('title', 'Download')
 @section('content')
 
+<x-header>Download</x-header>
+
 <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
     <!-- Hero Section -->
     <div class="mb-8 mt-16 text-center md:mb-12">
@@ -13,7 +15,7 @@
         </p>
     </div>
 
-    <x-search-bar></x-search-bar>
+
     
     <div class="mt-8 md:mt-10 bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
         <div class="overflow-x-auto">
