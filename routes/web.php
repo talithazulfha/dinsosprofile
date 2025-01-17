@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PpidController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\KegiatanController;
 
 Route::get('/', function () {
     return view('home');
@@ -31,7 +32,11 @@ Route::get('/detailFoto', function () {
 
 Route::get('/kegiatan', function () {
     return view('kegiatan');
-});
+})->name('kegiatan.index');
+
+// Route untuk detail kegiatan
+Route::get('/detailKegiatan/{id}', [KegiatanController::class, 'showDetailKegiatan'])->name('detailKegiatan');
+
 
 Route::get('/download', function () {
     return view('download');
