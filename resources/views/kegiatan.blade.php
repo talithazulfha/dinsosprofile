@@ -61,6 +61,7 @@
         </div>
     </div>
 
+
 <!-- Featured Activity (Center large activity) -->
 <div class="mb-12 flex justify-center">
     <div class="w-full max-w-4xl">
@@ -85,6 +86,28 @@
                 <a href="{{ route('detailKegiatan', ['id' => 1]) }}" class="text-black hover:text-gray-600 font-medium block text-right">
                     Lihat Detail »
                 </a>
+
+    <!-- Featured Activity -->
+    <div class="mb-12">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="md:flex">
+                <div class="md:flex-shrink-0">
+                    <img class="h-48 w-full object-cover md:w-96" 
+                         src="{{ asset('images/jambore.jpg') }}" 
+                         alt="Jambore Nasional">
+                </div>
+                <div class="p-8">
+                    <div class="text-sm text-gray-500 mb-1">03 Januari 2024</div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Jambore Nasional Pramuka Anak</h2>
+                    <p class="text-gray-600 mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor 
+                        congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus 
+                        malesuada libero, sit amet commodo magna eros quis urna.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">
+                        Lihat Detail »
+                    </a>
+                </div>
             </div>
         </div>
     </div>

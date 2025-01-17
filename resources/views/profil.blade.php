@@ -2,6 +2,7 @@
 @section('title', 'Profil')
 @section('content')
 
+
 <section class="bg-white">
     <div class="container mx-auto px-4">
         <div class="flex items-center mb-8">
@@ -10,6 +11,28 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                 </svg>
             </a>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 mt-16">
+        <h1 class="text-3xl font-bold text-navy-900 mb-8 text-center">Tentang DINSOS</h1>
+        
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="md:w-1/2">
+                <img src="{{ asset('images/home.png') }}" alt="Kantor Dinas Sosial" 
+                     class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+            <div class="md:w-1/2 space-y-4">
+                <p class="text-gray-600 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor 
+                    congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus 
+                    malesuada libero, sit amet commodo magna eros quis urna.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque 
+                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </p>
+            </div>
+
         </div>
 
         <div class="max-w-4xl mx-auto">
