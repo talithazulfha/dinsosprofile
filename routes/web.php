@@ -21,6 +21,10 @@ Route::get('/foto', function () {
     return view('foto');
 });
 
+Route::get('/video', function () {
+    return view('video');
+});
+
 Route::get('/detailFoto', function () {
     return view('detailFoto');
 });

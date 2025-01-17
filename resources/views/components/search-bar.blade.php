@@ -1,4 +1,4 @@
-<div class="max-w-4xl mx-auto px-4 py-6">
+<div class="max-w-4xl mx-auto px-4 py-6 transform hover:scale-102 transition-transform duration-300 shadow-sm">
     <div class="relative">
         <input type="text" 
                placeholder="Search" 

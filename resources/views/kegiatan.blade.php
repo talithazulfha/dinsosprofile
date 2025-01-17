@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title', 'Kegiatan')
 @section('content')
-<div class="container mx-auto px-4 py-8">
+<div class="container max-w-6xl mx-auto px-4 py-8">
     <!-- Search Bar -->
     <div class="mb-8 mt-16"> <!-- Menambahkan margin-top (mt-16) agar tidak tertutup navbar -->
         <div class="max-w-2xl mx-auto">

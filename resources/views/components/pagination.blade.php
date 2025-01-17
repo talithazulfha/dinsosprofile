@@ -1,4 +1,4 @@
-<div class="flex justify-center space-x-1 py-8">
+<div class="flex justify-center space-x-1 py-8 mt-12 transform hover:scale-102 transition-transform duration-300">
     <button class="px-4 py-2 bg-navy-900 text-white font-medium rounded-lg">1</button>
     <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 font-medium rounded-lg">2</button>
     <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 font-medium rounded-lg">3</button>

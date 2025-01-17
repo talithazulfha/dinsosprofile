@@ -35,11 +35,11 @@
                 <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
                         onclick="toggleSection('visi-misi')">
                     <span class="font-medium text-gray-800">Visi dan Misi Pemerintahan Daerah Provinsi Sumatera Barat</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div id="visi-misi" class="hidden px-6 py-4 border-t">
+                <div id="visi-misi" class="px-6 py-4 border-t transition-all duration-300 ease-in-out">
                     <div class="p-4 ">
                         <div class="space-y-6">
                             <div class="text-center">
@@ -63,17 +63,16 @@
                     </div>
                 </div>
             </div>
-            
-            {{-- Repeat similar structure for other sections --}}
+
             <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
                         onclick="toggleSection('tugas-fungsi')">
                     <span class="font-medium text-gray-800">Tugas dan Fungsi</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div id="tugas-fungsi" class="hidden px-6 py-4 border-t">
+                <div id="tugas-fungsi" class="px-6 py-4 border-t transition-all duration-300 ease-in-out">
                     <div class="p-4 ">
                         <div class="space-y-6">
                             <div>
@@ -101,11 +100,11 @@
                 <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
                         onclick="toggleSection('struktur')">
                     <span class="font-medium text-gray-800">Struktur Organisasi</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div id="struktur" class="hidden px-6 py-4 border-t">
+                <div id="struktur" class="px-6 py-4 border-t transition-all duration-300 ease-in-out">
                     <div class="p-4 ">
                         <div class="space-y-6">
                             <div>
@@ -120,12 +119,12 @@
             <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <button class="w-full px-6 py-4 text-left flex justify-between items-center" onclick="toggleSection('sejarah')">
                     <span class="font-medium text-gray-800">Sejarah Singkat</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
                 
-                <div id="sejarah" class="hidden px-6 py-4 border-t">
+                <div id="sejarah" class="px-6 py-4 border-t transition-all duration-300 ease-in-out">
                     <p class="text-gray-600 leading-relaxed">
                         {{ $shortenedSejarah }}
                     </p>
@@ -137,7 +136,7 @@
                 <button class="w-full px-6 py-4 text-left flex justify-between items-center" 
                         onclick="toggleSection('pegawai')">
                     <span class="font-medium text-gray-800">Daftar Pegawai Dinas Sosial Sumatera Barat</span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
@@ -145,41 +144,120 @@
                     {{-- Content here --}}
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<section class="py-16 bg-white">
+<!-- resources/views/components/service-hours.blade.php -->
+<section class="py-16 bg-gradient-to-br from-white via-gray-50 to-white">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-navy-900 mb-12 text-center">Jam Pelayanan</h2>
+        <h2 class="text-4xl font-bold text-navy-900 mb-12 text-center">Jam Pelayanan</h2>
         
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="text-center p-6 bg-gray-50 rounded-lg">
-                <div class="text-orange-500 font-medium mb-4">HARI SENIN - KAMIS</div>
-                <div class="text-2xl font-bold text-navy-900">08.00 - 15.30 WIB</div>
+        <div class="grid lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
+            <!-- Left Column -->
+            <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:bg-orange-50/30">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <div class="p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors duration-300 shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">LAYANAN KONSULTASI, INFORMASI DAN PENGADUAN</h3>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <div class="p-3 bg-orange-50 rounded-lg border border-orange-100 group-hover:bg-orange-100/50 transition-colors duration-300">
+                                <p class="text-gray-700">
+                                    <span class="font-medium text-orange-700 block mb-1">SENIN-KAMIS</span>
+                                    07.30 - 16.00 WIB
+                                </p>
+                            </div>
+                            <div class="p-3 bg-orange-50 rounded-lg border border-orange-100 group-hover:bg-orange-100/50 transition-colors duration-300">
+                                <p class="text-gray-700">
+                                    <span class="font-medium text-orange-700 block mb-1">JUM'AT</span>
+                                    07.30 - 16.30 WIB
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="text-center p-6 bg-gray-50 rounded-lg">
-                <div class="text-orange-500 font-medium mb-4">HARI SENIN - KAMIS</div>
-                <div class="text-2xl font-bold text-navy-900">08.00 - 15.30 WIB</div>
+
+            <!-- Right Column -->
+            <div class="grid gap-6">
+                <!-- Layanan Penanganan OT Card -->
+                <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:bg-blue-50/30">
+                    <div class="flex flex-col sm:flex-row items-start gap-4">
+                        <div class="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors duration-300 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">LAYANAN PENANGANAN ORANG TERLANTAR (OT)</h3>
+                            <div class="inline-flex items-center space-x-2 bg-blue-50 px-3 py-1 rounded-full">
+                                <span class="animate-pulse h-2 w-2 bg-blue-500 rounded-full"></span>
+                                <span class="text-blue-700 font-medium">SETIAP HARI 24 JAM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan Penyaluran Bantuan Card -->
+                <div class="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:bg-green-50/30">
+                    <div class="flex flex-col sm:flex-row items-start gap-4">
+                        <div class="p-3 bg-green-100 rounded-lg group-hover:bg-green-200 transition-colors duration-300 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">LAYANAN PENYALURAN BANTUAN LOGISTIK</h3>
+                            <div class="inline-flex items-center space-x-2 bg-green-50 px-3 py-1 rounded-full">
+                                <span class="animate-pulse h-2 w-2 bg-green-500 rounded-full"></span>
+                                <span class="text-green-700 font-medium">SETIAP HARI 24 JAM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <script>
     function toggleSection(id) {
+        const allSections = document.querySelectorAll('[id^="visi-misi"], [id^="tugas-fungsi"], [id^="struktur"], [id^="sejarah"], [id^="pegawai"]');
     const section = document.getElementById(id);
     const button = section.previousElementSibling;
     const icon = button.querySelector('svg');
+
+    allSections.forEach(sec => {
+            if (sec.id !== id) {
+            sec.style.display = 'none';
+            const otherButton = sec.previousElementSibling;
+            const otherIcon = otherButton.querySelector('svg');
+            otherIcon.classList.remove('rotate-180');
+            }
+        });
     
-    if (section.classList.contains('hidden')) {
-        section.classList.remove('hidden');
+        if (section.style.display === 'none' || section.style.display === '') {
+        section.style.display = 'block';
         icon.classList.add('rotate-180');
     } else {
-        section.classList.add('hidden');
+        section.style.display = 'none';
         icon.classList.remove('rotate-180');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initially hide all sections
+    const allSections = document.querySelectorAll('[id^="visi-misi"], [id^="tugas-fungsi"], [id^="struktur"], [id^="sejarah"], [id^="pegawai"]');
+    allSections.forEach(section => {
+        section.style.display = 'none';
+    });
+});
 </script>
 
 @endsection
