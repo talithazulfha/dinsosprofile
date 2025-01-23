@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PpidController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SejarahController;
 
@@ -16,8 +17,16 @@ Route::get('/berita', function () {
     return view('berita');
 });
 
-Route::get('/galeri', function () {
-    return view('galeri');
+Route::get('/foto', function () {
+    return view('foto');
+});
+
+Route::get('/video', function () {
+    return view('video');
+});
+
+Route::get('/detailFoto', function () {
+    return view('detailFoto');
 });
 
 Route::get('/kegiatan', function () {
@@ -28,6 +37,11 @@ Route::get('/download', function () {
     return view('download');
 });
 
-Route::get('/ppid', function () {
-    return view('ppid');
-});
+
+
+Route::get('/profilPpid', [PpidController::class, 'profilPpid'])->name('ppid.profil');
+Route::get('/informasiSertaMerta', [PpidController::class, 'informasiSertaMerta'])->name('ppid.serta-merta');
+Route::get('/informasiTersediaSetiapSaat', [PpidController::class, 'informasiTersediaSetiapSaat'])->name('ppid.setiap-saat');
+Route::get('/informasiBerkala', [PpidController::class, 'informasiBerkala'])->name('ppid.berkala');
+Route::get('/informasiDikecualikan', [PpidController::class, 'informasiDikecualikan'])->name('ppid.dikecualikan');
+
